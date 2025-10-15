@@ -1,0 +1,11 @@
+#cloud-config
+password: HackersConference
+chpasswd:
+  expire: false
+ssh_authorized_keys:
+  - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDIGYU1PhO095EV7fLgw+iZavdoiRn6KrbBrqwajQyznHZvRgOYf2brra9MOzg2Fw743t2tS2IivUqdhTHD6+xf0DG4WISYavZM/MFhuo1HF9vpfekcLq5kbKOK9CCB9cYZ2fBOjvAITGyvxPTTO9htQvmc6iPKj8RKWoyU8IWZFF8y0q4DhmXFVqEVE5AWCvahS7ynrUGYRCuaLzKF3TvhMF1Xx4X6UQaTLk1eGYTchhHx4AcL+wukegDLlcVoRZ0ItexSbgCqrriaYQY5rFIc3en8pncbEbF4ExO4iJAvVXJlv9yBwUm7NzCHJwI9ixTpBmwahFJlrNyMP84IU7VPMNjcNe5qQWmCPDF/j98KS3HDSh5nX95y6kX7+kv3iRr2A+hTP5zStvCM+gJNeEe4i5plxvrmhDVT9pgovqU8duutFAsyZ3D78Vw4cLg0TH8RkfZUThE6fZgWTS4F5kuCKrz/hOR7QImIK+lHonmo1N7W6HRBr/4twMwUsn/5jy0= matthew@matthew-IdeaPad-Gaming-3-15ARH05
+
+runcmd:
+  - apt update
+  - apt install nginx -y
+
