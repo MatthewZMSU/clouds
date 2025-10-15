@@ -1,0 +1,11 @@
+<network>  # Create network
+  <name>hackish-network</name>  # Network name
+  <bridge name='br-hacker0'/>  # Network is bridge type with name br-hacker0
+  <forward/>
+  <ip address='192.168.1.129' netmask='255.255.255.128'>  # virtual IPv4 addr of network with /25 bit mask (only last 7 bits change)
+    <dhcp>  # Use dhcp to randomly pick address
+      <range start='192.168.1.130' end='192.168.1.254'/>  # Addresses interval
+    </dhcp>
+  </ip>
+</network>
+
